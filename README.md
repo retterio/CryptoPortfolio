@@ -35,9 +35,9 @@ getCoins -> return coins
 
 Alarm.ts
 
-addAlarm -> input: id, coinName, lowerLimit, threshold
-alarmController -> this function gets called with tasks. It will add triggeredAlarms into state.
-addAlarm -> input: id, removes alarm with the id given
+#### addAlarm -> input: id, coinName, lowerLimit, threshold
+#### alarmController -> this function gets called with tasks. It will add triggeredAlarms into state.
+#### addAlarm -> input: id, removes alarm with the id given
 
 # Input for tests 
 
