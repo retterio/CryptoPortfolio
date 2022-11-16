@@ -1,23 +1,31 @@
 {
-  "name": "zone-locator",
+  "name": "crypto-portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "tsc -b .",
-    "deploy": "export RIO_CLI_URL=api.a101prod.retter.io && rio d --project-id 1c25k5o9a"
+    "deploy": "export RIO_CLI_URL=api.a101prod.retter.io && rio d --project-id vtkc2bg0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "14.17.2"
+    "@types/node": "14.17.2",
+    "ava": "4.0.1",
+    "ts-node": "10.4.0",
+    "tsconfig-paths": "^3.13.0",
+    "turbo": "1.5.5",
+    "typescript": "4.5.4",
+    "zod": "3.17.2",
+    "zod-to-json-schema": "3.17.0"
   },
   "dependencies": {
     "@retter/rio-cli": "^1.10.0",
     "@retter/sdk": "^0.4.0",
-    "rio": "^2.4.1",
-    "tesseract.js": "^2.1.5",
-    "textract": "^2.5.0"
+    "aws-sdk": "^2.1253.0",
+    "dotenv": "16.0.0",
+    "lodash": "^4.17.21",
+    "rio": "^2.4.1"
   }
 }

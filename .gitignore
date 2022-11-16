@@ -2,3 +2,4 @@ node_modules
 classes/**/.DS_Store
 classes/**/rio.ts
 .DS_Store
+classes/**/.env

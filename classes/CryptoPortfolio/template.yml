@@ -1,0 +1,39 @@
+authorizer: index.authorizer
+init: index.init
+getState: index.getState
+methods:
+  - method: getCoins
+    type: STATIC
+    handler: wallet.getCoins
+
+  - method: upsertToken
+    type: WRITE
+    inputModel: UpsertTokenInput
+    handler: wallet.upsertToken
+
+  - method: reduceToken
+    type: WRITE
+    inputModel: ReduceTokenInput
+    handler: wallet.reduceToken
+
+  - method: getWallet
+    type: READ
+    handler: wallet.getWallet
+
+  - method: getBalanceAs
+    type: READ
+    handler: wallet.getBalanceAs
+
+  - method: startAlarm
+    type: WRITE
+    inputModel: Alarm
+    handler: alarm.startAlarm
+
+  - method: alarmController
+    type: WRITE
+    handler: alarm.alarmController
+
+  - method: removeAlarm
+    type: WRITE
+    inputModel: Alarm
+    handler: alarm.removeAlarm

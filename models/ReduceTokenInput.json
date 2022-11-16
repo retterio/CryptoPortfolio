@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "primary": {
+            "type": "string"
+        },
+        "quantity": {
+            "type": "number"
+        }
+    },
+    "required": [
+        "primary",
+        "quantity"
+    ],
+    "additionalProperties": false
+}

@@ -23,61 +23,37 @@ rio deploy --project-id YOUR_PROJECT_ID --profile YOUR_PROFILE_NAME
 ```
 
 # How it works
-```typescript
-interface Cordinate {
-    lat: number
-    lon: number
-}
 
-interface Zone {
-    cordinates: Cordinate[]
-    id: string
-    name: string
-}
+Wallet.ts
 
-interface PublicState {
-    zones: Zone[]
-}
-```
+upsertToken -> input: primary, quantity
+reduceToken -> input: primary, quantity
 
-insertZone -> input: cordinates, id , name?
-removeZone -> input: id 
-updateZone -> input: id, cordinates?,  name?
+getBalanceAs ->  input: secondary
+getWallet -> return data.state.public.wallet
+getCoins -> return coins
 
-locateZone -> Cordinate alıcak, zoneId[] dönücek,
-getZones -> return state.public.zones
+Alarm.ts
+
+addAlarm -> input: id, coinName, lowerLimit, threshold
+alarmController -> this function gets called with tasks. It will add triggeredAlarms into state.
+addAlarm -> input: id, removes alarm with the id given
 
 # Input for tests 
 
-insertZone Body
+upsertToken Body
 ```bash
 {
-        "coordinates": [
-          [
-            41.03412,
-            28.940514
-          ],
-          [
-            41.008752,
-            28.966166
-          ],
-          [
-            40.984595,
-            28.910025
-          ]
-        ],
-        "id": "1",
-        "name": "Fatih"
-      }
-
+  "baseAsset": "ETH",
+  "quantity": 5
+}
 ```
 
 Then
 
-locateZone Body
+getBalance Body
 ```bash
 {
-    "lat": 44.013762,
-    "lon": 28.933997
+    {"secondaryCoin": "BTC"}
 }
 ```

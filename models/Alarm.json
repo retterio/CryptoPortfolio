@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "coinName": {
+            "type": "string"
+        },
+        "lowerLimit": {
+            "type": "boolean"
+        },
+        "threshold": {
+            "type": "number"
+        }
+    },
+    "required": [
+        "id",
+        "coinName",
+        "lowerLimit",
+        "threshold"
+    ],
+    "additionalProperties": false
+}
