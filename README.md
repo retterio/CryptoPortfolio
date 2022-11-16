@@ -54,6 +54,6 @@ Then
 getBalance Body
 ```bash
 {
-    {"secondaryCoin": "BTC"}
+    {"secondary": "BTC"}
 }
 ```
