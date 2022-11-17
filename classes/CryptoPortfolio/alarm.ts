@@ -51,6 +51,10 @@ export async function alarmController(data: Data): Promise<StepResponse> {
 
             if (!ringAlarm) return
                 
+            data.tasks.push({
+                after: 900,
+                method: "alarmController"
+            })
             triggeredAlarms.push({ id: alarm.id, coinName: alarm.coinName, lowerLimit: isBelow })  
         })
 
